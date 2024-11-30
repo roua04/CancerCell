@@ -1,0 +1,19 @@
+<div class="chatbot-container">
+    <h2>Bienvenue sur notre Chatbot médical</h2>
+    <p>Répondez aux questions ci-dessous pour obtenir une estimation du type de cancer et de son stade.</p>
+  
+    <div *ngIf="currentQuestionIndex < questions.length">
+      <p>{{ questions[currentQuestionIndex].question }}</p>
+      <button *ngFor="let option of questions[currentQuestionIndex].options" 
+              (click)="nextQuestion(option)" 
+              class="btn btn-primary">
+        {{ option }}
+      </button>
+    </div>
+  
+    <div *ngIf="currentQuestionIndex === questions.length">
+      <h3>Résultat de l'évaluation :</h3>
+      <p>{{ result }}</p>
+    </div>
+  </div>
+  

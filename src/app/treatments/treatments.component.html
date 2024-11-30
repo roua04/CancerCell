@@ -1,0 +1,26 @@
+<div class="form-group">
+    <label for="type">Type de cancer :</label>
+    <select [(ngModel)]="selectedType" (change)="filterTreatments()" id="type">
+      <option value="" disabled selected>Choisissez un type</option>
+      <option *ngFor="let type of types">{{ type }}</option>
+    </select>
+  </div>
+  
+  <div class="form-group">
+    <label for="niveau">Niveau :</label>
+    <select [(ngModel)]="selectedNiveau" (change)="filterTreatments()" id="niveau">
+      <option value="" disabled selected>Choisissez un niveau</option>
+      <option *ngFor="let niveau of niveaux">{{ niveau }}</option>
+    </select>
+  </div>
+  
+  <!-- Affichage du message si des traitements sont trouvés -->
+  <div *ngIf="treatmentMessage">
+    <p>{{ treatmentMessage }}</p>
+  </div>
+  
+  <!-- Message si aucun traitement n'est trouvé -->
+  <div *ngIf="!treatmentMessage && selectedType && selectedNiveau">
+    <p>Aucun traitement trouvé pour le type et le niveau sélectionnés.</p>
+  </div>
+  

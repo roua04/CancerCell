@@ -1,0 +1,30 @@
+.advice-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .advice-box {
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #f0f8ff;
+    max-width: 500px;
+    margin: 0 auto;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
